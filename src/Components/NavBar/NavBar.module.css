@@ -33,3 +33,62 @@
 .navLogo img {
   height: 4rem;
 }
+/*  */
+
+.smallNav {
+  background: white;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.smallNav img {
+  height: 5rem;
+}
+.smallNav :nth-child(n) {
+  list-style: none;
+}
+
+.smallNavIcons {
+  display: flex;
+  gap: 2rem;
+}
+.smallNavIcons :nth-child(n):hover {
+  cursor: pointer;
+  translate: 0 -2.5px;
+}
+
+.closeIcon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.smallNavBar {
+  height: 6rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.smallNavBar img {
+  height: 5rem;
+}
+
+@media (max-width: 770px) {
+  .ul {
+    display: none;
+  }
+  .smallNavBar {
+    display: flex;
+  }
+}

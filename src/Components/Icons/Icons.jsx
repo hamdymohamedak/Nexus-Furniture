@@ -1,4 +1,3 @@
-// Icons.js
 import React from "react";
 
 export const Icons = {
@@ -7,4 +6,5 @@ export const Icons = {
   search: () => <i className="fa-solid fa-magnifying-glass"></i>,
   shopping: () => <i className="fa-solid fa-cart-shopping"></i>,
   userPlus: () => <i className="fa-solid fa-user-plus"></i>,
+  CloseMenu: () => <i class="fa-solid fa-bars"></i>,
 };
