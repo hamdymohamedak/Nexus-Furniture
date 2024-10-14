@@ -20,7 +20,12 @@ html {
   box-sizing: border-box;
   transition: 0.2s;
 }
-
+section {
+  min-height: 100vh;
+}
+button {
+  cursor: pointer;
+}
 @media (max-width: 425px) {
   html {
     font-size: 10px;

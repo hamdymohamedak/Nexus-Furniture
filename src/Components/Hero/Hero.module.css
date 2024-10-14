@@ -1,0 +1,60 @@
+.Parent {
+  background: url(../../assets/Hero.webp) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.Parent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.popAlert {
+  background: rgb(255, 243, 227);
+  height: 20rem;
+  width: 30rem;
+  position: absolute;
+  right: 5%;
+  border-radius: 10px;
+  color: black;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.alertH2 {
+  font-size: 2.5rem;
+  color: rgb(185, 142, 47);
+  text-transform: capitalize;
+}
+.popBtn {
+  height: 3rem;
+  width: 9rem;
+  border: none;
+  background: rgb(185, 142, 47);
+  color: white;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 636px) {
+  .popAlert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

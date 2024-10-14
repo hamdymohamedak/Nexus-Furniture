@@ -1,0 +1,35 @@
+.ul {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.2rem;
+  height: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+.ul div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.ul div :nth-child(n):hover {
+  cursor: pointer;
+  translate: 0 -2.5px;
+}
+.ul div li {
+  list-style: none;
+  cursor: pointer;
+}
+.navLogo {
+  height: 4rem;
+  width: 13rem;
+}
+.navLogo img {
+  height: 4rem;
+}
