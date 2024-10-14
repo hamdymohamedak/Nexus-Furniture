@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Share.module.css";
-import TestingImg from "../../assets/Hero.webp";
-
+import TestingImg from "../../assets/product.avif";
+import { ViewportContainer } from "larose-js";
 const images = [
   TestingImg,
   TestingImg,
@@ -27,26 +27,29 @@ export default function Share() {
   const shuffledImages = shuffleArray(images);
 
   return (
-    <section className={styles.shareSec}>
-      <div className={styles.header}>Show Your Setup with</div>
-      <div className={styles.hashtag}>
-        <strong style={{ fontWeight: "bold" }}>#NexusFurniture</strong>
-      </div>
-      <div className={styles.imageGrid}>
-        {shuffledImages.map((image, index) => (
-          <div
-            key={index}
-            className={styles.imageWrapper}
-            style={{ "--random-rotation": `${Math.random() * 10 - 5}deg` }} // Random rotation
-          >
-            <img
-              src={image}
-              alt={`Setup ${index + 1}`}
-              className={styles.image}
-            />
-          </div>
-        ))}
-      </div>
-    </section>
+    <ViewportContainer>
+      <section className={styles.shareSec}>
+        <div className={styles.header}>Show Your Setup with</div>
+        <div className={styles.hashtag}>
+          <strong style={{ fontWeight: "bold" }}>#NexusFurniture</strong>
+        </div>
+        <div className={styles.imageGrid}>
+          {shuffledImages.map((image, index) => (
+            <div
+              key={index}
+              className={styles.imageWrapper}
+              style={{ "--random-rotation": `${Math.random() * 10 - 5}deg` }} // Random rotation
+            >
+              <img
+                loading="lazy"
+                src={image}
+                alt={`Setup ${index + 1}`}
+                className={styles.image}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+    </ViewportContainer>
   );
 }

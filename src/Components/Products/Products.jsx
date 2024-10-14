@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styles from "./Products.module.css";
-import testImg from "../../assets/Hero.jpg"; // Replace with your actual image paths
+import testImg from "../../assets/product.avif"; // Replace with your actual image paths
+import { ViewportContainer } from "larose-js";
+
 export default function Products() {
   const [products] = useState([
     {
@@ -24,32 +26,35 @@ export default function Products() {
   ]);
 
   return (
-    <section className={styles.productsSec}>
-      <div className={styles.title}>
-        <h1>Our Products</h1>
-        <h4>Discover our range of amazing products!</h4>
-      </div>
-      <div className={styles.cardParent}>
-        {products.map((product, index) => (
-          <div key={index} className={styles.card}>
-            <img
-              src={product.imgPath}
-              alt={product.imgTitle}
-              className={styles.productImg}
-            />
-            <div className={styles.cardContent}>
-              <h3 className={styles.productTitle}>{product.imgTitle}</h3>
-              <p className={styles.productDescription}>
-                {product.imgDescription}
-              </p>
-              <p className={styles.productPrice}>
-                ${product.imgPrice.toFixed(2)}
-              </p>
-              <button className={styles.addToCartBtn}>Add to Cart</button>
+    <ViewportContainer>
+      <section className={styles.productsSec}>
+        <div className={styles.title}>
+          <h1>Our Products</h1>
+          <h4>Discover our range of amazing products!</h4>
+        </div>
+        <div className={styles.cardParent}>
+          {products.map((product, index) => (
+            <div key={index} className={styles.card}>
+              <img
+                loading="lazy"
+                src={product.imgPath}
+                alt={product.imgTitle}
+                className={styles.productImg}
+              />
+              <div className={styles.cardContent}>
+                <h3 className={styles.productTitle}>{product.imgTitle}</h3>
+                <p className={styles.productDescription}>
+                  {product.imgDescription}
+                </p>
+                <p className={styles.productPrice}>
+                  ${product.imgPrice.toFixed(2)}
+                </p>
+                <button className={styles.addToCartBtn}>Add to Cart</button>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
+    </ViewportContainer>
   );
 }
