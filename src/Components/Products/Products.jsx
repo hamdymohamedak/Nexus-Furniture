@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Products.module.css";
 import testImg from "../../assets/Hero.jpg"; // Replace with your actual image paths
-
 export default function Products() {
   const [products] = useState([
     {

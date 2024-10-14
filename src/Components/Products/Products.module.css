@@ -81,7 +81,6 @@
   background-color: #218838;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .card {
     width: 100%;
