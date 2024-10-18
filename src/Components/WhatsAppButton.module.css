@@ -24,3 +24,33 @@
 .whatsapp-button:hover {
   background-color: #128c7e;
 }
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .whatsapp-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    bottom: 7%;
+    left: 4%;
+  }
+
+  .whatsapp-button img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Adjustments for very small screens */
+@media (max-width: 480px) {
+  .whatsapp-button {
+    padding: 6px 12px;
+    font-size: 12px;
+    bottom: 10%;
+    left: 3%;
+  }
+
+  .whatsapp-button img {
+    width: 18px;
+    height: 18px;
+  }
+}

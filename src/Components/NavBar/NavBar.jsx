@@ -68,10 +68,18 @@ const NavBar = () => {
           <Icons.CloseMenu />
         </div>
         <img src={logo} alt="La Rose Logo" />
-        <li>Home</li>
-        <li>Shop</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li>
+            <Link to={"/"}>Home</Link>
+          </li>
+          <li>
+            <Link to={"/Shop"}>Shop</Link>
+          </li>
+          <li>
+            <Link to={"/About"}>About</Link>
+          </li>
+          <li>
+            <Link to={"/Contact"}>Contact</Link>
+          </li>
         <div className={styles.smallNavIcons}>
           <div>
             <Icons.heart />
@@ -80,7 +88,9 @@ const NavBar = () => {
             <Icons.search />
           </div>
           <div>
-            <Icons.shopping />
+          <Link to={"/Cart"}>
+              <Icons.shopping />
+            </Link>
           </div>
           <div>
             <Icons.userPlus />
