@@ -25,7 +25,7 @@ export default function Browse() {
         <div className={styles.title}>
           <h1>Browse The Range</h1>
           <h4>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio
+          Nexus Furniture offers high-quality furniture, specializing in infinity tables for modern living
           </h4>
         </div>
         <div className={styles.cardParent}>

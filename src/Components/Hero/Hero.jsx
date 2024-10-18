@@ -13,7 +13,8 @@ export default function Hero() {
           </div>
           <h2 className={styles.alertH2}>Discover out new collection</h2>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, ut
+            Nexus Furniture offers high-quality furniture, specializing in
+            infinity tables for modern living
           </p>
           <button className={styles.popBtn}>Buy Now</button>
         </div>
