@@ -75,6 +75,7 @@
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin: 0.2rem;
 }
 
 .addToCartBtn:hover {
@@ -94,3 +95,9 @@
     font-size: 0.9rem;
   }
 }
+
+/* .alertParent {
+  background: red;
+  position: fixed;
+  right: 0;
+} */

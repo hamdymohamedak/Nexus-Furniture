@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import { useCart } from "../CartContext/CartContext";
 import styles from "./Products.module.css";
-import testImg from "../../assets/product.avif"; // Replace with your actual image paths
+import testImg from "../../assets/product.avif";
 import { ViewportContainer } from "larose-js";
 
 export default function Products() {
+  const { addToCart } = useCart();
+  const [addedProductId, setAddedProductId] = useState(null);
+
   const [products] = useState([
     {
       imgPath: testImg,
@@ -24,6 +28,16 @@ export default function Products() {
       imgPrice: 49.99,
     },
   ]);
+
+  const handleAddToCart = (product, index) => {
+    addToCart(product);
+    setAddedProductId(index); // Set the ID of the product just added
+
+    // Reset the button text after 5 seconds
+    setTimeout(() => {
+      setAddedProductId(null);
+    }, 5000);
+  };
 
   return (
     <ViewportContainer>
@@ -49,7 +63,15 @@ export default function Products() {
                 <p className={styles.productPrice}>
                   ${product.imgPrice.toFixed(2)}
                 </p>
-                <button className={styles.addToCartBtn}>Add to Cart</button>
+                <button
+                  className={styles.addToCartBtn}
+                  onClick={() => handleAddToCart(product, index)}
+                >
+                  {/* Change button text based on whether the product was added */}
+                  {addedProductId === index
+                    ? "Added to Cart Successfully"
+                    : "Add to Cart"}
+                </button>
               </div>
             </div>
           ))}

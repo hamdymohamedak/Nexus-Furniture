@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styles from "./NavBar.module.css";
-import logo from "../../assets/LaRose.webp";
+import logo from "../../assets/Logo-removebg-preview.png";
 import { Icons } from "../Icons/Icons";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [isSmallNavOpen, setIsSmallNavOpen] = useState(false);
@@ -17,10 +18,18 @@ const NavBar = () => {
           <img src={logo} alt="La Rose Logo" />
         </div>
         <div className={styles.navLinks}>
-          <li>Home</li>
-          <li>Shop</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li>
+            <Link to={"/"}>Home</Link>
+          </li>
+          <li>
+            <Link to={"/Shop"}>Shop</Link>
+          </li>
+          <li>
+            <Link to={"/About"}>About</Link>
+          </li>
+          <li>
+            <Link to={"/Contact"}>Contact</Link>
+          </li>
         </div>
         <div className={styles.iconContainer}>
           <div>
@@ -30,7 +39,9 @@ const NavBar = () => {
             <Icons.search />
           </div>
           <div>
-            <Icons.shopping />
+            <Link to={"/Cart"}>
+              <Icons.shopping />
+            </Link>
           </div>
           <div>
             <Icons.userPlus />
@@ -68,7 +79,11 @@ const NavBar = () => {
           <div>
             <Icons.search />
           </div>
-          <div>
+          <div
+            onClick={() => {
+              window.location.reload();
+            }}
+          >
             <Icons.shopping />
           </div>
           <div>

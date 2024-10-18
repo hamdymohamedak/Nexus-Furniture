@@ -1,26 +1,26 @@
 import React from "react";
+import { CartProvider } from "./Components/CartContext/CartContext"; // Import the provider
 import NavBar from "./Components/NavBar/NavBar";
 import Hero from "./Components/Hero/Hero";
 import Browse from "./Components/Browse/Browse";
 import Products from "./Components/Products/Products";
 import Share from "./Components/Share/Share";
 import WhatsAppButton from "./Components/WhatsAppButton";
-import { RoseRouter, Route } from "larose-js";
+import { Route, Routes } from "react-router-dom";
+import Cart from "./Components/Cart/Cart";
+
 export default function App() {
   return (
-    <>
+    <CartProvider>
       <NavBar />
-      <RoseRouter>
+      <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/Browse" element={<Browse />} />
         <Route path="/Products" element={<Products />} />
-        <Route path="Share/" element={<Share />} />
-
-        <WhatsAppButton
-          setMessage={"Hello Nexus-Furniture"}
-          setPhone={"+201551700603"}
-        />
-      </RoseRouter>
-    </>
+        <Route path="/Cart" element={<Cart />} />
+        <Route path="/Share" element={<Share />} />
+      </Routes>
+      <WhatsAppButton />
+    </CartProvider>
   );
 }

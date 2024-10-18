@@ -19,6 +19,8 @@ html {
   margin: 0;
   box-sizing: border-box;
   transition: 0.2s;
+  text-decoration: none;
+  color: black;
 }
 section {
   min-height: 100vh;
