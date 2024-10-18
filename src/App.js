@@ -20,7 +20,7 @@ export default function App() {
         <Route path="/Cart" element={<Cart />} />
         <Route path="/Share" element={<Share />} />
       </Routes>
-      <WhatsAppButton />
+      <WhatsAppButton setMessage={" "} setPhone={"+201551700603"} />
     </CartProvider>
   );
 }

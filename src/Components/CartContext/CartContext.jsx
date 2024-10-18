@@ -68,7 +68,7 @@ export const CartProvider = ({ children }) => {
     const whatsappMessage = `Hi, I am interested in purchasing the following items:\n\n${message}\n\nTotal: $${totalPrice.toFixed(
       2
     )}`;
-    const whatsappNumber = "+201278859768";
+    const whatsappNumber = "+201551700603";
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
       whatsappMessage
     )}`;

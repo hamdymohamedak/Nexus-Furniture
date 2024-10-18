@@ -79,11 +79,7 @@ const NavBar = () => {
           <div>
             <Icons.search />
           </div>
-          <div
-            onClick={() => {
-              window.location.reload();
-            }}
-          >
+          <div>
             <Icons.shopping />
           </div>
           <div>
