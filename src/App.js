@@ -8,7 +8,7 @@ import Share from "./Components/Share/Share";
 import WhatsAppButton from "./Components/WhatsAppButton";
 import { Route, Routes } from "react-router-dom";
 import Cart from "./Components/Cart/Cart";
-
+import Contact from "./Components/Contact/Contact";
 export default function App() {
   return (
     <CartProvider>
@@ -19,6 +19,7 @@ export default function App() {
         <Route path="/Products" element={<Products />} />
         <Route path="/Cart" element={<Cart />} />
         <Route path="/Share" element={<Share />} />
+        <Route path="/Contact" element={<Contact />} />
       </Routes>
       <WhatsAppButton setMessage={" "} setPhone={"+201551700603"} />
     </CartProvider>

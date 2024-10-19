@@ -30,19 +30,19 @@ button {
 }
 @media (max-width: 425px) {
   html {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
 @media (min-width: 426px) and (max-width: 768px) {
   html {
-    font-size: 13px;
+    font-size: 15px;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
   html {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
